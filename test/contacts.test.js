@@ -86,7 +86,6 @@ const router = require('../server')
       })
      })
 
-
      test('Delete /contacts/: id Number 5 or Person Number 6 ',(t)=> {
        request(router).delete('/contacts/5')
        .expect(204)
