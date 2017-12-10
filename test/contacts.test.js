@@ -67,7 +67,7 @@ const router = require('../server')
    test('PUT id 12 to /contacts/: id number 0 or Person Number 1',(t)=> {
      request(router).put('/contacts/0')
      .send([
-            {id:12,name:'Nantapob',email:'nantapob007@hotmail.com',phone: '123-456-7890',url:'www.google.com' ,notes:'PUBG'}
+            {id:13,name:'Sasithon',email:'Amfouy@gmail.com',phone: '123-456-7890',url:'www.google.com' ,notes:'DOTA2'}
           ])
      .expect(200)
      .then((res)=>{
@@ -76,11 +76,11 @@ const router = require('../server')
      .then((res)=>{
        let contacts = res.body
        let contact = contacts[0]
-       t.equal('Nantapob', contact.name)
-       t.equal('nantapob007@hotmail.com', contact.email)
+       t.equal('Sasithon', contact.name)
+       t.equal('Amfouy@gmail.com', contact.email)
        t.equal('123-456-7890', contact.phone)
        t.equal('www.google.com', contact.url)
-       t.equal('PUBG', contact.notes)
+       t.equal('DOTA2', contact.notes)
       })
        t.end()
       })
